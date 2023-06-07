@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-import csk,rcb
+from csk.views import*
+from rcb.views import *
 from india.views import *
 
 
@@ -24,5 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('csk/',include('csk.urls')),
     path('rcb/',include('rcb.urls')),
-    path('sewhag/',sewhag,name='sewhag')
+    path('sewhag/',sewhag,name='sewhag'),
+    path('akt/',akt,name='akt'),
+    path('bhavya/',bhavya,name='bhavya'),
+    path('sinchana/',sinchana,name='sinchana'),
 ]
